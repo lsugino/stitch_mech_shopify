@@ -1,0 +1,9 @@
+  <a href="{{ product.url | within: collection }}" title="{{ product.featured_image.alt | escape }}">
+    <img src="{{ product.featured_image | product_img_url: 'medium' }}" class="product-photo" alt="{{ product.featured_image.alt | escape }}" data-back="{{ product.featured_image | product_img_url: 'large' }}" 
+          data-front="{{ product.images[1] | product_img_url: 'large' }}"/>
+  </a>
+  
+  <p class="prod_title">
+    <a href="{{ product.url | within: collection }}">{{ product.title }}<br />{{ product.price | money | remove: '.00' }}</a>
+  </p>    
+          

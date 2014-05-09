@@ -1,0 +1,17 @@
+<div id="product_list">
+  <h2>{{ collection.title }}</h2>
+
+      {% if collection.products.size > 0 %}
+    
+        {% for product in collection.products %}
+        <div class="item">
+            {% include 'product-grid-item' %}
+          </div>
+        {% endfor %}
+
+      {% else %}    
+        <strong>No products found in this collection.</strong>
+      {% endif %}
+  </section>
+                                            
+  </div>

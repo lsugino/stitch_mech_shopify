@@ -1,0 +1,13 @@
+{% comment %}
+  This page represents the /collections and /products pages.
+{% endcomment %}
+
+<div id="product_list">
+    {% for link in linklists.featured-collections.links %}
+    {% assign collection = link.object %}
+    {% unless collection.handle == 'frontpage' %}
+      <h2>{{ collection.title }}</h2>
+        {% include 'collection-grid-item' %}
+    {% endunless %}
+  {% endfor %}
+</div>
